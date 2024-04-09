@@ -3,26 +3,22 @@
 
 log.info("Successfully loaded ".._ENV["!guid"]..".")
 
+-- ========== Loading ==========
+
 -- Helper mod
 mods.on_all_mods_loaded(function() for k, v in pairs(mods) do if type(v) == "table" and v.hfuncs then Helper = v end end end)
 
 -- Toml mod
-mods.on_all_mods_loaded(function() for k, v in pairs(mods) do if type(v) == "table" and v.tomlfuncs then Toml = v end end end)
+mods.on_all_mods_loaded(function() for k, v in pairs(mods) do if type(v) == "table" and v.tomlfuncs then Toml = v end end 
+    params = {
+        faster_teleporter_conversion_enabled = true
+    }
+    params = Toml.config_update(_ENV["!guid"], params)
+end)
 
 -- ========== Parameters ==========
 
 local tp = nil
-
-local default_params = {
-    faster_teleporter_conversion_enabled = true
-}
-
-local params = Toml.load_cfg(_ENV["!guid"])
-
-if not params then
-    Toml.save_cfg(_ENV["!guid"], default_params)
-    params = default_params
-end
 
 -- ========== ImGui ==========
 
