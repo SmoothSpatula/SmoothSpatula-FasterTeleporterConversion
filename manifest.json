@@ -1,0 +1,11 @@
+{
+	"name": "FasterTeleporterConversion",
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/SmoothSpatula/SmoothSpatula-FasterTeleporterConversion",
+	"description": "Make the gold animation faster when teleporting to the next stage",
+	"dependencies": [
+		"ReturnOfModding-ReturnOfModding-1.0.20",
+        "Klehrik-HelperFunctions-1.0.1",
+		"SmoothSpatula-TomlHelper-1.0.0"
+	]
+}
