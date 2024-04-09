@@ -1,4 +1,4 @@
--- Faster Teleporter Conversion v1.0.0
+-- Faster Teleporter Conversion v1.0.1
 -- SmoothSpatula
 
 log.info("Successfully loaded ".._ENV["!guid"]..".")
