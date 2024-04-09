@@ -13,8 +13,7 @@ mods.on_all_mods_loaded(function() for k, v in pairs(mods) do if type(v) == "tab
     params = {
         faster_teleporter_conversion_enabled = true
     }
-    -- Load Save
-    params = Toml.config_update(_ENV["!guid"], params)
+    params = Toml.config_update(_ENV["!guid"], params) -- Load Save
 end)
 
 -- ========== Parameters ==========
